@@ -9,11 +9,11 @@ from datetime import datetime, timedelta
 
 
 # Backend URL
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = "https://disasterforecast-api.onrender.com"
 
 # Test backend connection
 try:
-    health = requests.get(f"{BACKEND_URL}/health", timeout=3)
+    health = requests.get(f"{BACKEND_URL}/health", timeout=15)
     if health.status_code == 200:
         st.success("✅ Backend connected successfully!")
     else:
